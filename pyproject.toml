@@ -1,0 +1,20 @@
+[project]
+name = "robo-sim"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Chernov Arkadiy", email = "chernov.an@phystech.edu" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "mujoco>=3.16.0",
+    "pybullet>=3.2.7",
+]
+
+[project.scripts]
+robo-sim = "robo_sim:main"
+
+[build-system]
+requires = ["uv_build>=0.12.12,<0.13.0"]
+build-backend = "uv_build"
