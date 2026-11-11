@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.16)
+project(robosim_selection LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+find_package(gz-sim 10 REQUIRED)
+add_executable(robosim_gazebo_benchmark gazebo_runner.cpp)
+target_link_libraries(robosim_gazebo_benchmark PRIVATE gz-sim::gz-sim)

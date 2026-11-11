@@ -1,0 +1,12 @@
+{
+  "cpuset_cpus": "2-3",
+  "cpus": 2.0,
+  "memory_bytes": 2147483648,
+  "pids_limit": 256,
+  "timeout_seconds": 120.0,
+  "warmup_steps": 100,
+  "measured_steps": 2000,
+  "physics_dt_seconds": 0.01,
+  "repeats_pilot": 3,
+  "repeats_main": 10
+}

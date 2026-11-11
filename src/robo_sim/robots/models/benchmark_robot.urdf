@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<robot name="benchmark_robot">
+  <link name="base_link">
+    <inertial><origin xyz="0 0 0"/><mass value="1.6"/><inertia ixx="0.004" ixy="0" ixz="0" iyy="0.012" iyz="0" izz="0.014"/></inertial>
+    <visual><geometry><box size="0.30 0.24 0.12"/></geometry><material name="blue"><color rgba="0.20 0.48 0.82 1"/></material></visual>
+    <collision><geometry><box size="0.30 0.24 0.12"/></geometry></collision>
+  </link>
+  <link name="left_wheel">
+    <inertial><origin xyz="0 0 0"/><mass value="0.18"/><inertia ixx="0.00025" ixy="0" ixz="0" iyy="0.00045" iyz="0" izz="0.00025"/></inertial>
+    <visual><origin rpy="1.57079632679 0 0"/><geometry><cylinder radius="0.05" length="0.035"/></geometry><material name="black"><color rgba="0.1 0.1 0.1 1"/></material></visual>
+    <collision><origin rpy="1.57079632679 0 0"/><geometry><cylinder radius="0.05" length="0.035"/></geometry></collision>
+  </link>
+  <joint name="left_wheel_joint" type="continuous"><parent link="base_link"/><child link="left_wheel"/><origin xyz="0 0.12 -0.05"/><axis xyz="0 1 0"/></joint>
+  <link name="right_wheel">
+    <inertial><origin xyz="0 0 0"/><mass value="0.18"/><inertia ixx="0.00025" ixy="0" ixz="0" iyy="0.00045" iyz="0" izz="0.00025"/></inertial>
+    <visual><origin rpy="1.57079632679 0 0"/><geometry><cylinder radius="0.05" length="0.035"/></geometry><material name="black"><color rgba="0.1 0.1 0.1 1"/></material></visual>
+    <collision><origin rpy="1.57079632679 0 0"/><geometry><cylinder radius="0.05" length="0.035"/></geometry></collision>
+  </link>
+  <joint name="right_wheel_joint" type="continuous"><parent link="base_link"/><child link="right_wheel"/><origin xyz="0 -0.12 -0.05"/><axis xyz="0 1 0"/></joint>
+  <link name="caster">
+    <inertial><origin xyz="0 0 0"/><mass value="0.04"/><inertia ixx="0.00001" ixy="0" ixz="0" iyy="0.00001" iyz="0" izz="0.00001"/></inertial>
+    <visual><geometry><sphere radius="0.025"/></geometry><material name="grey"><color rgba="0.5 0.5 0.5 1"/></material></visual>
+    <collision><geometry><sphere radius="0.025"/></geometry></collision>
+  </link>
+  <joint name="caster_joint" type="fixed"><parent link="base_link"/><child link="caster"/><origin xyz="-0.105 0 -0.075"/></joint>
+</robot>

@@ -32,3 +32,5 @@ data/
 
 # Результаты бенчмарков
 results_*.txt
+*.pyc
+benchmark/worlds/
